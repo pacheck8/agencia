@@ -8,9 +8,10 @@
 ############################################
 ############################################
 ##############  Api cliente  ###############
-GET {{host}}{{urlclientes}}
-####
 
+#####peticion todos los clientes####
+GET {{host}}{{urlclientes}}
+####peticion insertar cliente####
 POST {{host}}{{urlclientes}}
 Content-Type: application/json
 
@@ -18,11 +19,10 @@ Content-Type: application/json
     "nombre": "Juan ",
     "apellidos": "Dominguez",
     "direccion": "Calle la vida es muy dura 5",
-    "telefono": 6665544841,
-    "fecha_de_nacimiento":1989-02-02,
+    "telefono": 666551,
+    "fecha_de_nacimiento":"1988-02-02",
     "email": "lkljsss@gmail.com",
-    "dni": "25212545s",
-
+    "dni": "25212545s"
   }
 #########
 
@@ -30,13 +30,50 @@ POST {{host}}{{urlclientes}}
 Content-Type: application/json
 
 {
-    "nombre": "Juan ",
+    "nombre": "pedro ",
     "apellidos": "Dominguez",
+     "direccion": "calle quevedo 12",
+     "telefono": 6635544,
+     "fecha_de_nacimiento":"2002-01-10",
+     "email": "lkljassss@gmail.com",
+     "dni": "25212575s"
+
+
+    
+
+
+    
+
+  }
+#############muestra un ID####
+GET {{host}}{{urlclientes}}/1
+
+##########borra un cliente por id####
+DELETE {{host}}{{urlclientes}}/4
+
+############################################
+############################################
+##############  Api Hoteles  ###############
+
+####devuelve los hoteles####
+GET {{host}}{{urlHotel}}
+
+#####inserta un hotel####
+POST {{host}}{{urlHotel}}
+Content-Type: application/json
+
+  {
+    "nombre": "melia",
+    "direccion": "lirio 125",
+    "ciudad":"valencia",
+    "numero_de_estrellas": 5,
+    "descripcion":"hotel primera linea",
+    "tarifa":"B1"
 
   }
 
-############################################
-############################################
-##############  Api Monitores  ###############
+##########borra un hotel por id#####
+DELETE  {{host}}{{urlHotel}}/4  
 
-GET {{host}}{{urlHotel}}
+
+
