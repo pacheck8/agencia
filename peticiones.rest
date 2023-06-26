@@ -1,1 +1,42 @@
-GET http://localhost:3000/
+@host = http://localhost:3000
+@urlclientes =/api/cliente
+
+@urlHotel=/api/hotel
+
+@urlViaje =/api/viaje
+
+############################################
+############################################
+##############  Api cliente  ###############
+GET {{host}}{{urlclientes}}
+####
+
+POST {{host}}{{urlclientes}}
+Content-Type: application/json
+
+{
+    "nombre": "Juan ",
+    "apellidos": "Dominguez",
+    "direccion": "Calle la vida es muy dura 5",
+    "telefono": 6665544841,
+    "fecha_de_nacimiento":1989-02-02,
+    "email": "lkljsss@gmail.com",
+    "dni": "25212545s",
+
+  }
+#########
+
+POST {{host}}{{urlclientes}}
+Content-Type: application/json
+
+{
+    "nombre": "Juan ",
+    "apellidos": "Dominguez",
+
+  }
+
+############################################
+############################################
+##############  Api Monitores  ###############
+
+GET {{host}}{{urlHotel}}

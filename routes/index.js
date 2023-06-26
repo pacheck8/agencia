@@ -1,9 +1,17 @@
-var express = require('express');
-var router = express.Router();
+const express = require ('express')
+const dotenv = require('dotenv').config()
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+const app = express()
 
-module.exports = router;
+let port = 0;
+if (process.env.PORT){
+    port= process.env.PORT}
+else{
+    port=3000
+}
+app.listen(process.env.PORT,()=>{
+    console.log('servidor escuchando en el puerto 3000')
+})
+
+
+console.log(process.env)
