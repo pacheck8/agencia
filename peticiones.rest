@@ -63,17 +63,45 @@ POST {{host}}{{urlHotel}}
 Content-Type: application/json
 
   {
-    "nombre": "melia",
-    "direccion": "lirio 125",
-    "ciudad":"valencia",
+    "nombre": "viking",
+    "direccion": "nafsdsa 125",
+    "ciudad":"noruega",
     "numero_de_estrellas": 5,
-    "descripcion":"hotel primera linea",
-    "tarifa":"B1"
+    "descripcion":"hotel valhalla",
+    "tarifa":"B5"
 
   }
 
 ##########borra un hotel por id#####
-DELETE  {{host}}{{urlHotel}}/4  
+DELETE  {{host}}{{urlHotel}}/
+
+###############APIviaje#############
+####################################
+GET {{host}}{{urlViaje}}
+#####
+
+
+POST {{host}}{{urlViaje}}
+Content-Type: application/json
+
+  {
+    
+    "fecha_salida": "2023-12-02",
+    "fecha_vuelta": "2023-12-15",
+    "identificador_vuelo_ida":"252ss",
+    "identificador_vuelo_vuelta": "545ss",
+    "hotel":"Melia"
+    
+
+  }
+
+###########
+#######
+
+DELETE  {{host}}{{urlViaje}}/6
+
+
+
 
 
 
